@@ -1,3 +1,4 @@
+python==3.11.7
 streamlit==1.31.0
 sympy==1.11.1
 chempy==0.7.7
