@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 # Konfigurasi Streamlit
 st.set_page_config(
-    page_title="Simulator Penyetaraan Reaksi Redoks",
+    page_title="Kalkulator Penyetaraan Persamaan Reaksi Redoks",
     page_icon="🧪",
     layout="centered",
     initial_sidebar_state="expanded"
@@ -665,7 +665,7 @@ def balance_redox_reaction(reactants: List[str], products: List[str]) -> str:
 
 def main():
     try:
-        st.title("🧪 Simulator Penyetaraan Reaksi Redoks")
+        st.title("🧪 Kalkulator Penyetaraan Persamaan Reaksi Redoks")
         logger.info("Judul aplikasi ditampilkan")
         
         # Tambahkan petunjuk penggunaan
