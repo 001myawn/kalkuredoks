@@ -668,15 +668,32 @@ def main():
         st.title("🧪 Simulator Penyetaraan Reaksi Redoks")
         logger.info("Judul aplikasi ditampilkan")
         
-        st.write("Masukkan reaksi redoks dengan format: A + B -> C + D")
-        st.write("Untuk ion, gunakan format: Fe^3+ (untuk ion Fe3+)")
+        # Tambahkan petunjuk penggunaan
+        st.markdown("### Petunjuk Penggunaan:")
+        st.markdown("""
+        - Pastikan penulisan unsur sudah benar (huruf kapital atau tidaknya). Contoh: H, Mg, Na
+        - Untuk angka-angka yang menunjukkan jumlah unsur dalam senyawa ditulis tanpa spasi. Contoh: O2, H2SO4, Ca(NO3)2
+        - Untuk angka-angka yang menunjukkan muatan, dipisahkan dengan tanda (^). contoh: H^+, NO3^-, SO4^2-
+        - Antar senyawa dipisahkan dengan spasi dan tanda (+). Contoh: Zn + Cu^2+
+        - Antar reaktan dan produk dipisahkan dengan spasi dan tanda (-> bukan panah langsung tapi strip & lebih dari).
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style="font-family: monospace; margin-left: 20px;">
+        Contoh: Zn + Cu^2+ -> Zn^2+ + Cu
+        </div>
+        """, unsafe_allow_html=True)
         
         # Tambahkan contoh reaksi
         with st.expander("Contoh Reaksi"):
-            st.write("1. H2O2 + MnO4^- -> Mn^2+ + O2")
-            st.write("2. Cr2O7^2- + I^- -> Cr^3+ + I2")
-            st.write("3. H2O2 + I^- -> I2 + H2O")
-            st.write("4. MnO4^- + C2O4^2- -> Mn^2+ + CO2")
+            st.markdown("""
+            <div style="font-family: monospace;">
+            1. H2O2 + MnO4^- -> Mn^2+ + O2<br><br>
+            2. Cr2O7^2- + I^- -> Cr^3+ + I2<br><br>
+            3. H2O2 + I^- -> I2 + H2O<br><br>
+            4. MnO4^- + C2O4^2- -> Mn^2+ + CO2
+            </div>
+            """, unsafe_allow_html=True)
         
         logger.info("Contoh reaksi ditampilkan")
         
